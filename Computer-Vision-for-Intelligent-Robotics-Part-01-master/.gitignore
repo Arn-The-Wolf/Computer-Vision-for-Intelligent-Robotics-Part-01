@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.DS_Store
+*.log
+.env
+FaceRecognition/.venv/
+FaceRecognition/__pycache__/
