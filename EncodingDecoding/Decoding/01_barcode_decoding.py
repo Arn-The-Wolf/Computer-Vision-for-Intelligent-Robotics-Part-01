@@ -40,3 +40,4 @@ cv2.imwrite(output_file, image)
 print(f"Annotated image saved as {output_file}")
 
 cv2.destroyAllWindows()
+
