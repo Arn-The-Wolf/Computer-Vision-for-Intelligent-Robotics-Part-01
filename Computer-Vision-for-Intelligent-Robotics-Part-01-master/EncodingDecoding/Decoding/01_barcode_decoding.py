@@ -1,9 +1,18 @@
 from pyzbar.pyzbar import decode
 import cv2
 import numpy as np
+import sys
+
+# Allow passing the image path via CLI, fallback to default
+barcode_image = sys.argv[1] if len(sys.argv) > 1 else "barcode.png"
 
 # Read the image
-image = cv2.imread("barcode.png")
+image = cv2.imread(barcode_image)
+
+if image is None:
+    print(f"Error: Unable to read image '{barcode_image}'")
+    print("Please provide a valid image path.")
+    sys.exit(1)
 
 # Decode the barcode
 barcodes = decode(image)
